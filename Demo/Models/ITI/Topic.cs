@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Models
+namespace Demo.Models.ITI
 {
-    [Table("Department")]
-    public class Department
+    [Table("Topic")]
+    public class Topic
     {
         [Key]
         public int ID { get; set; }
@@ -17,7 +17,6 @@ namespace Demo.Models
         [MaxLength(100)]
         public string Name { get; set; }
 
-        public int Ins_ID { get; set; }
-        public DateTime HiringDate { get; set; }
+        public ICollection<Course> Courses { get; set; }
     }
 }

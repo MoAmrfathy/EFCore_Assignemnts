@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Models
+namespace Demo.Models.ITI
 {
     [Table("Instructor")]
     public class Instructor
@@ -25,5 +25,10 @@ namespace Demo.Models
 
         public decimal HourRate { get; set; }
         public int Dept_ID { get; set; }
+
+
+        public Department Department { get; set; }
+
+        public ICollection<Course_Inst> Course_Insts { get; set; }
     }
 }

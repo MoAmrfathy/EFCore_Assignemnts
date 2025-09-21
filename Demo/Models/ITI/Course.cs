@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Models
+namespace Demo.Models.ITI
 {
     [Table("Course")]
     public class Course
@@ -20,5 +20,11 @@ namespace Demo.Models
 
         public string Description { get; set; }
         public int Top_ID { get; set; }
+
+        public Topic Topic { get; set; }
+
+        public ICollection<Stud_Course> Stud_Courses { get; set; }
+        public ICollection<Course_Inst> Course_Insts { get; set; }
+
     }
 }

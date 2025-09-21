@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Models
+namespace Demo.Models.ITI
 {
     [Table("Student")]
     public class Student
@@ -25,5 +25,9 @@ namespace Demo.Models
 
         public int Age { get; set; }
         public int Dep_Id { get; set; }
+
+        public Department Department { get; set; }
+        public ICollection<Stud_Course> Stud_Courses { get; set; }
+
     }
 }
