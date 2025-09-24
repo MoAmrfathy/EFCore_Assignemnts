@@ -18,6 +18,7 @@ namespace Demo.Contexts.ITIContext
             optionsBuilder.UseSqlServer("Server=.;Database=ITI2;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
